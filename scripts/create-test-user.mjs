@@ -1,8 +1,8 @@
 // 创建测试用户脚本
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = "https://ogdxytmwbhdrscdhtwzn.supabase.co";
-const supabaseKey = "sb_secret_WlaDpRrH2YV1_bMPrRCqjQ_qbFNlizH";
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
